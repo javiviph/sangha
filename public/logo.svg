@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" fill="none">
+  <!-- Flame shape -->
+  <path d="M22 44 C22 44 10 34 14 22 C16 16 20 12 20 12 C20 12 18 22 24 28 C26 30 28 28 26 24 C30 28 34 36 28 44 Z" fill="url(#flame)" />
+  <!-- Spiral swirl -->
+  <path d="M18 40 C14 36 12 30 15 25 C16 23 18 22 20 23 C22 24 22 27 20 28 C18 29 16 28 16 26 C16 23 18 21 20 20" stroke="#9B1C1C" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+  
+  <!-- Text: Sangha Activa -->
+  <text x="42" y="28" fontFamily="Georgia, serif" fontSize="17" fontWeight="700" fill="#1a1a1a">Sangha Activa</text>
+  <!-- Text: Comunidad Budista -->
+  <text x="43" y="42" fontFamily="Arial, sans-serif" fontSize="10" fill="#888888" letterSpacing="0.5">Comunidad Budista</text>
+
+  <defs>
+    <linearGradient id="flame" x1="20" y1="12" x2="28" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#F59E0B"/>
+      <stop offset="100%" stopColor="#DC2626"/>
+    </linearGradient>
+  </defs>
+</svg>
