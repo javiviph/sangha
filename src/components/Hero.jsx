@@ -22,7 +22,7 @@ export default function Hero() {
             <a href="#contacto" className="btn btn-primary">
               Pedir información
             </a>
-            <a href="#reservar" className="btn btn-tertiary hero-tertiary">
+            <a href="#reservar" className="btn btn-tertiary hero-tertiary btn-gold-shine">
               Reservar plaza
             </a>
           </div>

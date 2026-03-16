@@ -278,6 +278,37 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+/* ─── GOLD SHINE HOVER ──────────────────────── */
+/* Used on the 'Reservar plaza' hero tertiary button */
+@keyframes goldSweep {
+  0%   { background-position: -150% center; }
+  100% { background-position: 250% center; }
+}
+
+.btn-gold-shine {
+  /* base: inherit from btn-tertiary */
+  position: relative;
+  transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.btn-gold-shine:hover {
+  /* Sweep a golden shimmer across the text */
+  background: linear-gradient(
+    105deg,
+    var(--color-secondary) 0%,
+    #d4a017 30%,
+    #f5d87a 48%,
+    #d4a017 66%,
+    var(--color-secondary) 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom-color: #d4a017;
+  animation: goldSweep 2.4s ease-in-out infinite;
+}
+
 /* ─── RESPONSIVE GRIDS ──────────────────────── */
 /* ForWhom mosaic: single column on mobile */
 .for-whom-row-2,
