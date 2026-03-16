@@ -30,14 +30,17 @@ export default function Hero() {
 
         {/* ── RIGHT: Image + floating quote card ── */}
         <div className="hero-image-wrap">
-          <img 
-            src="/hero-woman.png" 
-            alt="Mujer meditando en un salón minimalista con luz natural" 
-            className="hero-image"
-            fetchpriority="high"
-            width="600"
-            height="750"
-          />
+          <picture>
+            <source srcSet="/hero-woman.webp" type="image/webp" />
+            <img 
+              src="/hero-woman.png" 
+              alt="Mujer meditando en un salón minimalista con luz natural" 
+              className="hero-image"
+              fetchpriority="high"
+              width="600"
+              height="750"
+            />
+          </picture>
 
           {/* Floating quote card — hidden on mobile */}
           <div className="hero-quote-card">

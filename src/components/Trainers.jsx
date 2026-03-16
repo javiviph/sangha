@@ -69,14 +69,17 @@ export default function Trainers() {
                 backgroundColor: 'var(--color-surface-high)',
                 flexShrink: 0,
               }}>
-                <img
-                  src={PHOTOS[t.photo]}
-                  alt={t.name}
-                  loading="lazy"
-                  width="80"
-                  height="80"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
-                />
+                <picture>
+                  <source srcSet={PHOTOS[t.photo].replace('.png', '.webp')} type="image/webp" />
+                  <img
+                    src={PHOTOS[t.photo]}
+                    alt={t.name}
+                    loading="lazy"
+                    width="80"
+                    height="80"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
+                  />
+                </picture>
               </div>
 
               {/* Name */}

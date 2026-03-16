@@ -7,10 +7,68 @@
     <meta name="description" content="Aprende a meditar de forma guiada con el programa GIM de Sangha Activa. Transforma tu relación con el estrés a través de la sabiduría milenaria." />
     <title>Sangha Activa - GIM Landing Page</title>
 
-    {/* Preload LCP Image */}
-    <link rel="preload" as="image" href="/hero-woman.png" fetchpriority="high" />
+    <!-- Critical CSS to break the request chain and render Hero immediately -->
+    <style>
+      :root {
+        --color-primary: #5f0006;
+        --color-secondary: #895110;
+        --color-surface: #fcf9f4;
+        --color-on-surface: #2d2d2d;
+        --color-on-surface-variant: #555555;
+        --font-serif: 'Newsreader', serif;
+        --font-sans: 'Manrope', sans-serif;
+      }
+      body {
+        margin: 0;
+        background-color: var(--color-surface);
+        font-family: var(--font-sans);
+        color: var(--color-on-surface-variant);
+      }
+      .hero-section {
+        background-color: var(--color-surface);
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        padding: 4rem 0 6rem;
+      }
+      .container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .hero-grid { display: flex; flex-direction: column-reverse; gap: 2.5rem; }
+      @media (min-width: 768px) {
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; flex-direction: unset; }
+      }
+      .hero-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        border-radius: 0.75rem;
+        object-fit: cover;
+        display: block;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .btn-primary {
+        background: linear-gradient(180deg, #801818 0%, #5f0006 100%);
+        color: #ffffff;
+      }
+    </style>
 
-    {/* Google Fonts */}
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="/hero-woman.webp" fetchpriority="high" type="image/webp" />
+    <link rel="preload" as="image" href="/logo-sangha.png" />
+
+    <!-- Google Fonts with swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
