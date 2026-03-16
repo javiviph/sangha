@@ -31,9 +31,9 @@ export default function Hero() {
         {/* ── RIGHT: Image + floating quote card ── */}
         <div className="hero-image-wrap">
           <picture>
-            <source srcSet="/hero-woman.webp" type="image/webp" />
+            <source srcSet="/images/hero-woman.webp" type="image/webp" />
             <img 
-              src="/hero-woman.png" 
+              src="/images/hero-woman.png" 
               alt="Mujer meditando en un salón minimalista con luz natural" 
               className="hero-image"
               fetchpriority="high"

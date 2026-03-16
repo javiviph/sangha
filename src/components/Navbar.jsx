@@ -36,7 +36,7 @@ export default function Navbar() {
         {/* Logo: white PNG + CSS color filter → brand red on light bg */}
         <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <img
-            src="/logo-sangha.png"
+            src="/images/logo-sangha.webp"
             alt="Sangha Activa"
             style={{
               height: '90px',

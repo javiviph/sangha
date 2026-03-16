@@ -8,7 +8,7 @@ export default function FinalClose() {
       style={{ 
         padding: '10rem 0',
         position: 'relative',
-        backgroundImage: "url('/quote-bg.png')",
+        backgroundImage: "url('/images/quote-bg.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
@@ -34,7 +34,7 @@ export default function FinalClose() {
         
         {/* Logo in white — no filter needed on dark bg */}
         <img
-          src="/logo-sangha.png"
+          src="/images/logo-sangha.webp"
           alt="Sangha Activa"
           style={{ height: '110px', width: 'auto', opacity: 0.9 }}
         />

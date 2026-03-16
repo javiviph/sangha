@@ -2,12 +2,12 @@ import React from 'react';
 import '../index.css';
 
 const PHOTOS = {
-  f1: '/trainer-f1.png',
-  f2: '/trainer-f2.png',
-  f3: '/trainer-f3.png',
-  f4: '/trainer-f4.png',
-  m1: '/trainer-m1.png',
-  m2: '/trainer-m2.png',
+  f1: '/images/trainer-f1.png',
+  f2: '/images/trainer-f2.png',
+  f3: '/images/trainer-f3.png',
+  f4: '/images/trainer-f4.png',
+  m1: '/images/trainer-m1.png',
+  m2: '/images/trainer-m2.png',
 };
 
 const trainers = [

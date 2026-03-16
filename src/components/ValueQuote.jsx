@@ -8,7 +8,7 @@ export default function ValueQuote() {
       style={{ 
         padding: '10rem 0',
         position: 'relative',
-        backgroundImage: "url('/quote-bg.png')",
+        backgroundImage: "url('/images/quote-bg.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
