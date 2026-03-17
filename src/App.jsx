@@ -10,7 +10,6 @@ import Credibility from './components/Credibility'
 import Trainers from './components/Trainers'
 import CommercialInfo from './components/CommercialInfo'
 import CaptureForm from './components/CaptureForm'
-import SecondaryCTA from './components/SecondaryCTA'
 import FAQ from './components/FAQ'
 import FinalClose from './components/FinalClose'
 import Testimonials from './components/Testimonials'
@@ -34,7 +33,6 @@ function App() {
         <Trainers />
         <CommercialInfo />
         <CaptureForm />
-        <SecondaryCTA />
         <FAQ />
         <FinalClose />
       </main>

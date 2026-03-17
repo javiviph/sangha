@@ -46,13 +46,12 @@ export default function Navbar() {
           />
         </a>
 
-        {/* CTA */}
         <a
           href="#contacto"
           className="btn btn-primary"
           style={{ padding: '0.6rem 1.4rem', fontSize: '0.875rem' }}
         >
-          Pedir información
+          Solicitar Inscripción
         </a>
       </div>
     </nav>

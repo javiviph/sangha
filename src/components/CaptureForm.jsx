@@ -127,7 +127,7 @@ export default function CaptureForm() {
 
           <div style={{ gridColumn: 'span 2', textAlign: 'left', marginTop: '1rem' }}>
             <button type="submit" className="btn btn-primary" style={{ padding: '1rem 3rem', backgroundColor: '#771b1b', color: '#fff', border: 'none', borderRadius: '4px', fontWeight: '700', fontSize: '1rem' }}>
-              ENVIAR
+              Solicitar Inscripción
             </button>
           </div>
 

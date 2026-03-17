@@ -54,7 +54,7 @@ export default function FinalClose() {
             color: 'var(--color-primary)',
             padding: '1rem 2rem'
           }}>
-            Inscribirme ahora
+            Solicitar Inscripción
           </a>
           <a 
             href="https://sanghaactiva.playoffinformatica.com/InscripcioWeb.php?idActivitat=1307" 
