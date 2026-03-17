@@ -48,13 +48,27 @@ export default function FinalClose() {
           </p>
         </div>
 
-        <a href="#contacto" className="btn" style={{ 
-          backgroundColor: 'var(--color-surface-lowest)', 
-          color: 'var(--color-primary)',
-          marginTop: '1rem'
-        }}>
-          Solicitar Información
-        </a>
+        <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <a href="#contacto" className="btn" style={{ 
+            backgroundColor: 'var(--color-surface-lowest)', 
+            color: 'var(--color-primary)',
+          }}>
+            Solicitar Información
+          </a>
+          <a 
+            href="https://sanghaactiva.playoffinformatica.com/InscripcioWeb.php?idActivitat=1307" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn" 
+            style={{ 
+              backgroundColor: 'transparent', 
+              color: 'var(--color-surface)',
+              border: '1px solid rgba(255,255,255,0.3)'
+            }}
+          >
+            Reservar plaza
+          </a>
+        </div>
 
       </div>
     </section>

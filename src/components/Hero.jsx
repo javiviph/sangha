@@ -22,7 +22,12 @@ export default function Hero() {
             <a href="#contacto" className="btn btn-primary">
               Pedir información
             </a>
-            <a href="#reservar" className="btn btn-tertiary hero-tertiary btn-gold-shine">
+            <a 
+              href="https://sanghaactiva.playoffinformatica.com/InscripcioWeb.php?idActivitat=1307" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-tertiary hero-tertiary btn-gold-shine"
+            >
               Reservar plaza
             </a>
           </div>

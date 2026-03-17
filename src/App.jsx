@@ -13,6 +13,7 @@ import CaptureForm from './components/CaptureForm'
 import SecondaryCTA from './components/SecondaryCTA'
 import FAQ from './components/FAQ'
 import FinalClose from './components/FinalClose'
+import Testimonials from './components/Testimonials'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Hero />
         <WhatIsGIM />
         <ForWhom />
+        <Testimonials />
         <HowItWorks />
         <Modalities />
         <ValueQuote />
