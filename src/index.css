@@ -410,6 +410,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+    padding: 2.5rem !important;
+    gap: 3rem !important;
+  }
+}
+
 /* ─── RESPONSIVE GRIDS ──────────────────────── */
 /* ForWhom mosaic: single column on mobile */
 .for-whom-row-2,

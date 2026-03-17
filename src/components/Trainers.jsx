@@ -47,27 +47,27 @@ export default function Trainers() {
             maxWidth: '600px',
             margin: '1rem auto 0',
           }}>
-            Encuentra tu grupo más cercano o únete a nuestras sesiones online.
+            Un equipo de guías con años de experiencia en la práctica y la transmisión de la meditación budista aplicada.
           </p>
         </div>
 
         {/* Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-          gap: '3rem 1.5rem',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))',
+          gap: '3rem 2rem',
         }}>
           {trainers.map((t, i) => (
-            <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '1rem' }}>
               
-              {/* Square photo with subtle rounding */}
+              {/* Circular photo as before */}
               <div style={{
                 width: '100px',
                 height: '100px',
-                borderRadius: '4px',
+                borderRadius: '50%',
                 overflow: 'hidden',
                 backgroundColor: '#f5f5f5',
-                marginBottom: '1.25rem'
+                flexShrink: 0,
               }}>
                 <picture>
                   <source srcSet={PHOTOS[t.photo].replace('.png', '.webp')} type="image/webp" />
@@ -82,27 +82,26 @@ export default function Trainers() {
                 </picture>
               </div>
 
-              {/* Text */}
-              <h4 style={{ 
-                fontFamily: 'var(--font-sans)', 
-                fontSize: '1.1rem', 
-                fontWeight: '600',
-                color: '#2d2d2d',
-                lineHeight: 1.3,
-                margin: '0 0 0.5rem 0'
-              }}>
-                {t.isSpecial ? t.name : `En ${t.location} con ${t.name}`}
-              </h4>
-
-              <a href="#" style={{
-                fontFamily: 'var(--font-sans)',
-                fontSize: '0.875rem',
-                fontWeight: '700',
-                color: 'var(--color-primary)',
-                textDecoration: 'none'
-              }}>
-                {t.name === 'Online - English Speaking' ? 'Grups and schedules' : 'Grupos y horarios'}
-              </a>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                <span style={{
+                  fontFamily: 'var(--font-serif)',
+                  fontSize: '1.1rem',
+                  fontWeight: '700',
+                  color: 'var(--color-on-surface)',
+                  lineHeight: 1.2
+                }}>
+                  {t.name}
+                </span>
+                
+                <span style={{
+                  fontFamily: 'var(--font-sans)',
+                  fontSize: '0.85rem',
+                  color: 'var(--color-on-surface-variant)',
+                  lineHeight: 1.4
+                }}>
+                  {t.location}
+                </span>
+              </div>
             </div>
           ))}
         </div>

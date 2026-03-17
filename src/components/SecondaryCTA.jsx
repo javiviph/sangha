@@ -10,7 +10,12 @@ export default function SecondaryCTA() {
           ¿Ya lo tienes claro y prefieres reservar directamente?
         </p>
 
-        <a href="#link-externo" className="btn-tertiary">
+        <a 
+          href="https://sanghaactiva.playoffinformatica.com/InscripcioWeb.php?idActivitat=1307" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="btn-tertiary"
+        >
           Reservar plaza externa
         </a>
 
