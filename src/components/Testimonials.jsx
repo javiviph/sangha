@@ -38,15 +38,37 @@ export default function Testimonials() {
   return (
     <section className="testimonials-section">
       {/* Amber Header */}
-      <div className="testimonials-header">
-        <div className="container" style={{ textAlign: 'center' }}>
-          <h2 className="headline-md" style={{ color: 'var(--color-on-surface)', marginBottom: '1.5rem' }}>
+      <div className="testimonials-header" style={{ backgroundColor: 'var(--color-secondary-container)', padding: '8rem 1.5rem' }}>
+        <div className="container" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '2rem', alignItems: 'center' }}>
+          <h2 className="display-sm" style={{ color: 'var(--color-primary)', maxWidth: '900px' }}>
             Lo que dicen nuestr@s alumn@s sobre el curso de meditación GIM
           </h2>
-          <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.05rem', lineHeight: 1.6, opacity: 0.8 }}>
-            Desde nuestros inicios en 2012 más de 1000 alumn@s han cursado y finalizado los 10 pasos de nuestro programa para aprender a meditar. 
-            Puedes seguirnos en <a href="https://instagram.com/meditaciongim" target="_blank" style={{ color: 'inherit', fontWeight: 'bold' }}>@meditaciongim</a> para leer más.
-          </p>
+          
+          <div style={{ 
+            backgroundColor: 'rgba(255, 255, 255, 0.4)', 
+            padding: '2rem 3rem', 
+            borderRadius: '4px',
+            backdropFilter: 'blur(8px)',
+            maxWidth: '850px',
+            border: '1px solid rgba(255, 255, 255, 0.3)',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem'
+          }}>
+            <p style={{ 
+              fontSize: '1.25rem', 
+              lineHeight: 1.5, 
+              color: 'var(--color-primary)', 
+              fontWeight: '600',
+              fontFamily: 'var(--font-serif)',
+              margin: 0
+            }}>
+              "Desde nuestros inicios en 2012 más de <span style={{ fontSize: '1.5rem', fontWeight: '800', borderBottom: '2px solid' }}>1000</span> alumn@s han cursado y finalizado los 10 pasos para aprender a meditar."
+            </p>
+            <p style={{ margin: 0, fontSize: '1rem', color: 'rgba(95, 0, 6, 0.8)' }}>
+              Puedes seguirnos en <a href="https://instagram.com/meditaciongim" target="_blank" style={{ color: 'var(--color-primary)', fontWeight: '800', textDecoration: 'underline' }}>@meditaciongim</a> para leer más reseñas y ver nuestra comunidad.
+            </p>
+          </div>
         </div>
       </div>
 
