@@ -2,33 +2,45 @@ import React from 'react';
 import '../index.css';
 
 const PHOTOS = {
-  f1: '/images/trainer-f1.png',
-  f2: '/images/trainer-f2.png',
-  f3: '/images/trainer-f3.png',
-  f4: '/images/trainer-f4.png',
-  m1: '/images/trainer-m1.png',
-  m2: '/images/trainer-m2.png',
+  pilar:     '/images/trainers/pilar-lopez.jpg',
+  jordi:     '/images/trainers/jordi-gomez.jpg',
+  tenzin:    '/images/trainers/ngawang-tenzin.jpg',
+  susana:    '/images/trainers/susana-lopez.jpg',
+  arantxa:   '/images/trainers/arantxa-santesteban.jpg',
+  lourdes:   '/images/trainers/lourdes-navarro.jpg',
+  maribel:   '/images/trainers/maribel-saludes.png',
+  marta:     '/images/trainers/marta-arroyo.jpg',
+  montse:    '/images/trainers/montserrat-rumi.jpg',
+  elisabet:  '/images/trainers/elisabet-alcalde.jpg',
+  robert:    '/images/trainers/robert-roig.jpg',
+  francisco: '/images/trainers/francisco-molina.jpg',
+  eva:       '/images/trainers/eva-pares.jpg',
+  lluis:     '/images/trainers/lluis-salvador.jpg',
+  paula:     '/images/trainers/paula-pallares.jpg',
+  melisa:    '/images/trainers/melisa-gonzalez.jpg',
+  silvia:    '/images/trainers/silvia-del-rio.jpg',
+  english:   '/images/trainers/english-trainer.jpg',
 };
 
 const trainers = [
-  { name: 'Pilar López',          location: 'St. Iscle de Vallata', photo: 'f1' },
-  { name: 'Jordi Gómez',          location: 'Vilassar de Mar', photo: 'm1' },
-  { name: 'Ngawang Tenzin',       location: 'On line', photo: 'm2' },
-  { name: 'Susana López',         location: 'Barcelona', photo: 'f3' },
-  { name: 'Arantxa Santesteban',  location: 'Molins de Rei', photo: 'f2' },
-  { name: 'Lourdes Navarro',      location: 'Vilassar de Mar', photo: 'f4' },
-  { name: 'Maribel Saludes',      location: 'Esplugues de Llobregat y Sant Just Desvern', photo: 'f1' },
-  { name: 'Marta Arroyo',         location: 'Mataró y Vilassar de Mar', photo: 'f3' },
-  { name: 'Montserrat Rumí',      location: 'Barcelona', photo: 'f2' },
-  { name: 'Elisabet Alcalde',     location: 'Barcelona', photo: 'f4' },
-  { name: 'Robert Roig',          location: 'Barcelona', photo: 'm2' },
-  { name: 'Francisco Molina',     location: 'Sabadell', photo: 'm1' },
-  { name: 'Eva Pares',            location: 'Vilassar de Mar', photo: 'f3' },
-  { name: 'Lluís Salvador',       location: 'Pineda de Mar', photo: 'm2' },
-  { name: 'Paula Pallarès',       location: 'Tàrrega', photo: 'f1' },
-  { name: 'Melisa González',      location: 'Sabadell', photo: 'f4' },
-  { name: 'Silvia del Río',       location: 'Lima (Perú)', photo: 'f2' },
-  { name: 'Online - English Speaking', location: '', photo: 'm1', isSpecial: true },
+  { name: 'Pilar López',          location: 'St. Iscle de Vallata', photo: 'pilar' },
+  { name: 'Jordi Gómez',          location: 'Vilassar de Mar', photo: 'jordi' },
+  { name: 'Ngawang Tenzin',       location: 'On line', photo: 'tenzin' },
+  { name: 'Susana López',         location: 'Barcelona', photo: 'susana' },
+  { name: 'Arantxa Santesteban',  location: 'Molins de Rei', photo: 'arantxa' },
+  { name: 'Lourdes Navarro',      location: 'Vilassar de Mar', photo: 'lourdes' },
+  { name: 'Maribel Saludes',      location: 'Esplugues de Llobregat y Sant Just Desvern', photo: 'maribel' },
+  { name: 'Marta Arroyo',         location: 'Mataró y Vilassar de Mar', photo: 'marta' },
+  { name: 'Montserrat Rumí',      location: 'Barcelona', photo: 'montse' },
+  { name: 'Elisabet Alcalde',     location: 'Barcelona', photo: 'elisabet' },
+  { name: 'Robert Roig',          location: 'Barcelona', photo: 'robert' },
+  { name: 'Francisco Molina',     location: 'Sabadell', photo: 'francisco' },
+  { name: 'Eva Pares',            location: 'Vilassar de Mar', photo: 'eva' },
+  { name: 'Lluís Salvador',       location: 'Pineda de Mar', photo: 'lluis' },
+  { name: 'Paula Pallarès',       location: 'Tàrrega', photo: 'paula' },
+  { name: 'Melisa González',      location: 'Sabadell', photo: 'melisa' },
+  { name: 'Silvia del Río',       location: 'Lima (Perú)', photo: 'silvia' },
+  { name: 'Online - English Speaking', location: '', photo: 'english', isSpecial: true },
 ];
 
 export default function Trainers() {
@@ -60,7 +72,7 @@ export default function Trainers() {
           {trainers.map((t, i) => (
             <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '1rem' }}>
               
-              {/* Circular photo as before */}
+              {/* Circular photo RESTORED */}
               <div style={{
                 width: '100px',
                 height: '100px',
@@ -68,9 +80,11 @@ export default function Trainers() {
                 overflow: 'hidden',
                 backgroundColor: '#f5f5f5',
                 flexShrink: 0,
+                boxShadow: '0 4px 12px rgba(0,0,0,0.08)'
               }}>
                 <picture>
-                  <source srcSet={PHOTOS[t.photo].replace('.png', '.webp')} type="image/webp" />
+                  {/* Using extension replacement to match the generated .webp files */}
+                  <source srcSet={PHOTOS[t.photo].replace(/\.(jpg|png)$/, '.webp')} type="image/webp" />
                   <img
                     src={PHOTOS[t.photo]}
                     alt={t.name}
@@ -93,14 +107,16 @@ export default function Trainers() {
                   {t.name}
                 </span>
                 
-                <span style={{
-                  fontFamily: 'var(--font-sans)',
-                  fontSize: '0.85rem',
-                  color: 'var(--color-on-surface-variant)',
-                  lineHeight: 1.4
-                }}>
-                  {t.location}
-                </span>
+                {t.location && (
+                  <span style={{
+                    fontFamily: 'var(--font-sans)',
+                    fontSize: '0.85rem',
+                    color: 'var(--color-on-surface-variant)',
+                    lineHeight: 1.4
+                  }}>
+                    {t.location}
+                  </span>
+                )}
               </div>
             </div>
           ))}
