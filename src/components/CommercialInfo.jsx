@@ -34,15 +34,30 @@ export default function CommercialInfo() {
               <span style={{ fontSize: '1rem', color: '#888', fontWeight: '500' }}>/ trimestre</span>
             </div>
             
-            <a 
-              href="https://sanghaactiva.playoffinformatica.com/InscripcioWeb.php?idActivitat=1307" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-              style={{ alignSelf: 'flex-start', padding: '1.2rem 2.5rem' }}
-            >
-              Inscribirme ahora
-            </a>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', width: '100%' }}>
+              <a 
+                href="#contacto" 
+                className="btn btn-primary"
+                style={{ width: '100%', textAlign: 'center', padding: '1.2rem' }}
+              >
+                Inscribirme ahora
+              </a>
+              <a 
+                href="https://sanghaactiva.playoffinformatica.com/InscripcioWeb.php?idActivitat=1307" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ 
+                  fontFamily: 'var(--font-sans)', 
+                  fontSize: '0.9rem', 
+                  color: 'var(--color-primary)', 
+                  textAlign: 'center',
+                  fontWeight: '600',
+                  textDecoration: 'none'
+                }}
+              >
+                O reservar plaza directamente
+              </a>
+            </div>
           </div>
 
           {/* Right: Conditions Container */}

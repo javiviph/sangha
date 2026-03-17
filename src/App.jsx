@@ -14,6 +14,7 @@ import SecondaryCTA from './components/SecondaryCTA'
 import FAQ from './components/FAQ'
 import FinalClose from './components/FinalClose'
 import Testimonials from './components/Testimonials'
+import Locations from './components/Locations'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Modalities />
         <ValueQuote />
         <Credibility />
+        <Locations />
         <Trainers />
         <CommercialInfo />
         <CaptureForm />

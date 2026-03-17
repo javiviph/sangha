@@ -48,12 +48,13 @@ export default function FinalClose() {
           </p>
         </div>
 
-        <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
           <a href="#contacto" className="btn" style={{ 
             backgroundColor: 'var(--color-surface-lowest)', 
             color: 'var(--color-primary)',
+            padding: '1rem 2rem'
           }}>
-            Solicitar Información
+            Inscribirme ahora
           </a>
           <a 
             href="https://sanghaactiva.playoffinformatica.com/InscripcioWeb.php?idActivitat=1307" 

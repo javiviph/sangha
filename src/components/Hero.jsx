@@ -20,7 +20,7 @@ export default function Hero() {
 
           <div className="hero-ctas">
             <a href="#contacto" className="btn btn-primary">
-              Pedir información
+              Inscribirse ahora
             </a>
             <a 
               href="https://sanghaactiva.playoffinformatica.com/InscripcioWeb.php?idActivitat=1307" 

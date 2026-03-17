@@ -10,14 +10,19 @@ export default function SecondaryCTA() {
           ¿Ya lo tienes claro y prefieres reservar directamente?
         </p>
 
-        <a 
-          href="https://sanghaactiva.playoffinformatica.com/InscripcioWeb.php?idActivitat=1307" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="btn-tertiary"
-        >
-          Reservar plaza externa
-        </a>
+        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <a href="#contacto" className="btn btn-primary">
+            Inscribirme ahora
+          </a>
+          <a 
+            href="https://sanghaactiva.playoffinformatica.com/InscripcioWeb.php?idActivitat=1307" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-tertiary"
+          >
+            Reservar mi plaza
+          </a>
+        </div>
 
       </div>
     </section>
