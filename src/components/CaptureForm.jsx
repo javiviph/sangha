@@ -74,7 +74,7 @@ export default function CaptureForm() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: '1.5rem 2rem' }}>
+        <form onSubmit={handleSubmit} className="capture-form-grid">
           
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <label style={labelStyle}>Nombre *</label>
@@ -102,7 +102,7 @@ export default function CaptureForm() {
             <span style={errorStyle}>{showErrors && !formData.lastName && 'Este campo es obligatorio'}</span>
           </div>
 
-          <div style={{ gridColumn: 'span 2', display: 'flex', flexDirection: 'column' }}>
+          <div className="col-span-desktop" style={{ display: 'flex', flexDirection: 'column' }}>
             <label style={labelStyle}>Correo electrónico *</label>
             <input 
               type="email" 
@@ -115,7 +115,7 @@ export default function CaptureForm() {
             <span style={errorStyle}>{showErrors && !formData.email && 'Este campo es obligatorio'}</span>
           </div>
 
-          <div style={{ gridColumn: 'span 2', display: 'flex', flexDirection: 'column' }}>
+          <div className="col-span-desktop" style={{ display: 'flex', flexDirection: 'column' }}>
             <label style={labelStyle}>Teléfono de contacto</label>
             <input 
               type="tel" 
@@ -128,7 +128,7 @@ export default function CaptureForm() {
             <div style={errorStyle} />
           </div>
 
-          <div style={{ gridColumn: 'span 2', display: 'flex', flexDirection: 'column' }}>
+          <div className="col-span-desktop" style={{ display: 'flex', flexDirection: 'column' }}>
             <label style={labelStyle}>¿Dónde te gustaría cursar el GIM? *</label>
             <select 
               className="input-field"
@@ -142,7 +142,7 @@ export default function CaptureForm() {
             <span style={errorStyle}>{showErrors && !formData.location && 'Este campo es obligatorio'}</span>
           </div>
 
-          <div style={{ gridColumn: 'span 2', display: 'flex', gap: '1rem', alignItems: 'flex-start', marginTop: '0.5rem' }}>
+          <div className="col-span-desktop" style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginTop: '0.5rem' }}>
             <input 
               type="checkbox" 
               style={{ marginTop: '0.35rem', cursor: 'pointer' }}
@@ -170,8 +170,8 @@ export default function CaptureForm() {
             </div>
           </div>
 
-          <div style={{ gridColumn: 'span 2', textAlign: 'left', marginTop: '1rem' }}>
-            <button type="submit" className="btn btn-primary" style={{ padding: '1rem 3.5rem', backgroundColor: '#771b1b', color: '#fff', border: 'none', borderRadius: '4px', fontWeight: '700', fontSize: '1rem', cursor: 'pointer' }}>
+          <div className="col-span-desktop" style={{ textAlign: 'left', marginTop: '1rem' }}>
+            <button type="submit" className="capture-form-button">
               Solicitar Inscripción
             </button>
           </div>
