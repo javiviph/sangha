@@ -40,7 +40,7 @@ const trainers = [
   { name: 'Paula Pallarès',       location: 'Tàrrega', photo: 'paula' },
   { name: 'Melisa González',      location: 'Sabadell', photo: 'melisa' },
   { name: 'Silvia del Río',       location: 'Lima (Perú)', photo: 'silvia' },
-  { name: 'Online - English Speaking', location: '', photo: 'english', isSpecial: true },
+  { name: 'Konstatin Mudrack', location: 'Online - English Speaking', photo: 'english' },
 ];
 
 export default function Trainers() {
