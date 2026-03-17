@@ -34,10 +34,10 @@ export default function CaptureForm() {
       <div className="container" style={{ maxWidth: '800px' }}>
         
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 className="display-md" style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-on-surface)', marginBottom: '1.5rem' }}>
+          <h2 className="headline-md" style={{ color: 'var(--color-primary)' }}>
             Cómo inscribirse en el Programa GIM
           </h2>
-          <p className="body-md" style={{ color: 'var(--color-on-surface-variant)', lineHeight: 1.6 }}>
+          <p className="body-md" style={{ color: 'var(--color-on-surface-variant)', lineHeight: 1.6, marginTop: '1rem' }}>
             Fácil, rellena este formulario y te acompañaremos de forma personalizada durante todo el proceso de inscripción.
           </p>
         </div>

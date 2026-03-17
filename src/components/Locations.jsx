@@ -17,12 +17,12 @@ export default function Locations() {
     <section className="section" style={{ backgroundColor: '#fff', padding: '6rem 0' }}>
       <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: '3rem', alignItems: 'center' }}>
         
-        <div style={{ textAlign: 'center', maxWidth: '800px' }}>
-          <h2 className="display-md" style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-on-surface)', marginBottom: '1.5rem' }}>
-            Dónde se cursa el Programa de Meditación GIM presencial e inscripciones abiertas
+        <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+          <h2 className="headline-md" style={{ color: 'var(--color-primary)' }}>
+            Dónde se cursa el Programa de Meditación GIM
           </h2>
-          <p className="body-md" style={{ color: 'var(--color-on-surface-variant)', lineHeight: 1.6 }}>
-            A continuación te presentamos las áreas de Cataluña donde tenemos formador@s o centros para aprender a meditar con el GIM. También encontrarás inscripciones abiertas a nuevos grupos de meditación.
+          <p className="body-md" style={{ color: 'var(--color-on-surface-variant)', lineHeight: 1.6, marginTop: '1rem' }}>
+            A continuación te presentamos las áreas de Cataluña donde tenemos formador@s o centros para aprender a meditar con el GIM.
           </p>
         </div>
 
