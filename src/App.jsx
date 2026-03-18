@@ -14,6 +14,7 @@ import FAQ from './components/FAQ'
 import FinalClose from './components/FinalClose'
 import Testimonials from './components/Testimonials'
 import Locations from './components/Locations'
+import WhatsAppButton from './components/WhatsAppButton'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <FAQ />
         <FinalClose />
       </main>
+      <WhatsAppButton />
     </>
   )
 }
