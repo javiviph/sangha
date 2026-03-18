@@ -36,6 +36,9 @@ export default function FinalClose() {
         <img
           src="/images/logo-sangha.webp"
           alt="Sangha Activa"
+          width="263"
+          height="110"
+          loading="lazy"
           style={{ height: '110px', width: 'auto', opacity: 0.9 }}
         />
 
@@ -48,26 +51,13 @@ export default function FinalClose() {
           </p>
         </div>
 
-        <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', marginTop: '1rem', justifyContent: 'center' }}>
           <a href="#contacto" className="btn" style={{ 
             backgroundColor: 'var(--color-surface-lowest)', 
             color: 'var(--color-primary)',
             padding: '1rem 2rem'
           }}>
             Solicitar Inscripción
-          </a>
-          <a 
-            href="https://sanghaactiva.playoffinformatica.com/InscripcioWeb.php?idActivitat=1307" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="btn" 
-            style={{ 
-              backgroundColor: 'transparent', 
-              color: 'var(--color-surface)',
-              border: '1px solid rgba(255,255,255,0.3)'
-            }}
-          >
-            Reservar plaza
           </a>
         </div>
 

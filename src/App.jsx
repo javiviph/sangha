@@ -19,8 +19,8 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* Add padding-top to main so Hero content isn't hidden behind fixed nav */}
-      <main style={{ paddingTop: '64px' }}>
+      {/* Increased padding-top to prevent layout shifts or overlap with fixed nav */}
+      <main style={{ paddingTop: '90px' }}>
         <Hero />
         <WhatIsGIM />
         <ForWhom />

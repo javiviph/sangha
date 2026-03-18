@@ -205,6 +205,18 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-backdrop-filter: blur(24px);
 }
 
+.navbar-logo {
+  height: 64px; /* Consistent height on mobile */
+  width: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .navbar-logo {
+    height: 90px;
+  }
+}
+
 /* ─── HERO ─────────────────────────────────── */
 .hero-section {
   background-color: var(--color-surface);

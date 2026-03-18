@@ -31,3 +31,11 @@ Este proyecto ha sido desarrollado siguiendo estándares modernos de desarrollo 
 
 - **Hosting:** [Vercel](https://vercel.com/).
 - **Configuración SPA:** Archivo `vercel.json` incluido para gestionar las reescrituras de rutas, asegurando que las recargas de página funcionen correctamente en una aplicación de una sola página (SPA).
+
+## Mantenimiento y Control de Cambios
+
+Para facilitar el seguimiento de las evoluciones del sitio, se utiliza el documento:
+- [ULTIMOS_CAMBIOS.md](./ULTIMOS_CAMBIOS.md)
+
+**Regla de Oro:** Este documento debe ser actualizado antes de cada despliegue (deploy) a producción, detallando de forma clara y concisa las mejoras o correcciones implementadas.
+

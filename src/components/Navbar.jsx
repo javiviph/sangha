@@ -1,21 +1,30 @@
 import React from 'react';
 import '../index.css';
 
-/*
-  CSS filter strategy for the white-on-transparent logo PNG:
-  ─────────────────────────────────────────────────────────
-  The logo is white. On the light cream navbar background it would be invisible.
-  We use CSS `filter` chains to colorize it without touching the file:
-
-  • logoFilterDark  → white → brand dark red  (#5f0006)
-    brightness(0) zeroes out all channels first (makes it black),
-    then we layer invert/sepia/saturate/hue-rotate to reach the target hue.
-
-  • logoFilterWhite → no filter (white stays white) perfect on dark bg sections.
+/* 
+  Inlined SVG Logo for zero-overhead load (Fastest LCP).
+  Directly uses the brand colors to avoid expensive CSS filters.
 */
-
-const logoFilterRed =
-  'brightness(0) saturate(100%) invert(7%) sepia(95%) saturate(4000%) hue-rotate(345deg) brightness(0.85)';
+const LogoSVG = ({ className, style }) => (
+  <svg 
+    className={className} 
+    style={style} 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 220 56" 
+    fill="none"
+  >
+    <path d="M22 44 C22 44 10 34 14 22 C16 16 20 12 20 12 C20 12 18 22 24 28 C26 30 28 28 26 24 C30 28 34 36 28 44 Z" fill="url(#flame-nav)" />
+    <path d="M18 40 C14 36 12 30 15 25 C16 23 18 22 20 23 C22 24 22 27 20 28 C18 29 16 28 16 26 C16 23 18 21 20 20" stroke="#5f0006" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+    <text x="42" y="28" fontFamily="var(--font-serif)" fontSize="18" fontWeight="700" fill="#5f0006">Sangha Activa</text>
+    <text x="43" y="42" fontFamily="var(--font-sans)" fontSize="10" fill="#555555" letterSpacing="0.5">Comunidad Budista</text>
+    <defs>
+      <linearGradient id="flame-nav" x1="20" y1="12" x2="28" y2="44" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stopColor="#F59E0B"/>
+        <stop offset="100%" stopColor="#5f0006"/>
+      </linearGradient>
+    </defs>
+  </svg>
+);
 
 export default function Navbar() {
   return (
@@ -25,25 +34,17 @@ export default function Navbar() {
       left: 0,
       right: 0,
       zIndex: 100,
-      backgroundColor: 'rgba(252, 249, 244, 0.92)',
+      backgroundColor: 'rgba(252, 249, 244, 0.94)',
       backdropFilter: 'blur(16px)',
       WebkitBackdropFilter: 'blur(16px)',
-      borderBottom: '1px solid rgba(0,0,0,0.06)',
-      padding: '0.5rem 0',
+      borderBottom: '1px solid rgba(95, 0, 6, 0.08)',
+      padding: '0.4rem 0',
     }}>
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 
-        {/* Logo: white PNG + CSS color filter → brand red on light bg */}
+        {/* Logo inlined for 0ms LCP paint time */}
         <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-          <img
-            src="/images/logo-sangha.webp"
-            alt="Sangha Activa"
-            style={{
-              height: '90px',
-              width: 'auto',
-              filter: logoFilterRed,
-            }}
-          />
+           <LogoSVG className="navbar-logo" />
         </a>
 
         <a

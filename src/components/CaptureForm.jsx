@@ -77,8 +77,9 @@ export default function CaptureForm() {
         <form onSubmit={handleSubmit} className="capture-form-grid">
           
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <label style={labelStyle}>Nombre *</label>
+            <label htmlFor="name" style={labelStyle}>Nombre *</label>
             <input 
+              id="name"
               type="text" 
               placeholder="Introduce tu nombre" 
               className="input-field"
@@ -90,8 +91,9 @@ export default function CaptureForm() {
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <label style={labelStyle}>Apellidos *</label>
+            <label htmlFor="lastName" style={labelStyle}>Apellidos *</label>
             <input 
+              id="lastName"
               type="text" 
               placeholder="Introduce tus apellidos" 
               className="input-field"
@@ -103,8 +105,9 @@ export default function CaptureForm() {
           </div>
 
           <div className="col-span-desktop" style={{ display: 'flex', flexDirection: 'column' }}>
-            <label style={labelStyle}>Correo electrónico *</label>
+            <label htmlFor="email" style={labelStyle}>Correo electrónico *</label>
             <input 
+              id="email"
               type="email" 
               placeholder="Introduce tu email" 
               className="input-field"
@@ -116,8 +119,9 @@ export default function CaptureForm() {
           </div>
 
           <div className="col-span-desktop" style={{ display: 'flex', flexDirection: 'column' }}>
-            <label style={labelStyle}>Teléfono de contacto</label>
+            <label htmlFor="phone" style={labelStyle}>Teléfono de contacto</label>
             <input 
+              id="phone"
               type="tel" 
               className="input-field"
               placeholder="Tu número de teléfono"
@@ -129,8 +133,9 @@ export default function CaptureForm() {
           </div>
 
           <div className="col-span-desktop" style={{ display: 'flex', flexDirection: 'column' }}>
-            <label style={labelStyle}>¿Dónde te gustaría cursar el GIM? *</label>
+            <label htmlFor="location" style={labelStyle}>¿Dónde te gustaría cursar el GIM? *</label>
             <select 
+              id="location"
               className="input-field"
               value={formData.location}
               onChange={(e) => setFormData({...formData, location: e.target.value})}
@@ -143,31 +148,36 @@ export default function CaptureForm() {
           </div>
 
           <div className="col-span-desktop" style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginTop: '0.5rem' }}>
-            <input 
-              type="checkbox" 
-              style={{ marginTop: '0.35rem', cursor: 'pointer' }}
-              checked={formData.accepted}
-              onChange={(e) => setFormData({...formData, accepted: e.target.checked})}
-            />
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <p style={{ fontSize: '0.85rem', color: '#666', lineHeight: 1.5, margin: 0 }}>
-                Protección de Datos De conformidad con Reglamento General de Protección de Datos (RGPD 2016/679) y del resto de normativas vigentes... 
-                <button 
-                  type="button"
-                  onClick={() => setShowLegal(!showLegal)}
-                  style={{ background: 'none', border: 'none', color: 'var(--color-primary)', fontWeight: '700', cursor: 'pointer', padding: '0 0.5rem', fontSize: '0.85rem' }}
-                >
-                  {showLegal ? 'Ver menos' : 'Ver más'}
-                </button>
-              </p>
-              
-              {showLegal && (
-                <p style={{ fontSize: '0.75rem', color: '#888', lineHeight: 1.4, margin: '0.5rem 0' }}>
-                  le informamos que sus datos serán tratados con la finalidad de gestionar las actividades y, estatutos de la asociación, en base al cumplimento de nuestras obligaciones legales y a nuestro legítimo interés. Del mismo modo, si Ud. ha dado su consentimiento expreso en algún momento, sus datos serán tratados también con la finalidad de mantenerle informado de nuestras actividades. Le comunicamos que en ningún caso serán cedidos a terceros salvo que sea necesario para cumplir con las finalidades previstas, y que se conservarán por el tiempo que exista una relación o mientras existan obligaciones legales. Puede solicitar más información, o ejercer los derechos que le asisten frente al Responsable del Tratamiento: Associació Sangha Activa | CIF: G65817587 | Masía Ca L'Oller s/n, 08359 Sant Iscle de Vallalta (Bcn) | info@sanghaactiva.com Asimismo, también puede dirigirse ante la Autoridad de Protección de Datos Personales (www.aepd.es)
+            <label htmlFor="accepted" style={{ display: 'flex', gap: '1rem', cursor: 'pointer' }}>
+              <input 
+                id="accepted"
+                type="checkbox" 
+                style={{ marginTop: '0.35rem', cursor: 'pointer' }}
+                checked={formData.accepted}
+                onChange={(e) => setFormData({...formData, accepted: e.target.checked})}
+              />
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <p style={{ fontSize: '0.85rem', color: '#666', lineHeight: 1.5, margin: 0 }}>
+                  <span style={{ fontWeight: '600' }}>He leído y acepto la Política de Protección de Datos *</span>. 
+                  De conformidad con Reglamento General de Protección de Datos (RGPD 2016/679) y del resto de normativas vigentes... 
+                  <button 
+                    id="toggle-legal"
+                    type="button"
+                    onClick={(e) => { e.preventDefault(); setShowLegal(!showLegal); }}
+                    style={{ background: 'none', border: 'none', color: 'var(--color-primary)', fontWeight: '700', cursor: 'pointer', padding: '0 0.5rem', fontSize: '0.85rem' }}
+                  >
+                    {showLegal ? 'Ver menos' : 'Ver más'}
+                  </button>
                 </p>
-              )}
-              {showErrors && !formData.accepted && <span style={{ ...errorStyle, marginTop: 0 }}>Debes aceptar la política de privacidad</span>}
-            </div>
+                
+                {showLegal && (
+                  <p style={{ fontSize: '0.75rem', color: '#888', lineHeight: 1.4, margin: '0.5rem 0' }}>
+                    le informamos que sus datos serán tratados con la finalidad de gestionar las actividades y, estatutos de la asociación, en base al cumplimento de nuestras obligaciones legales y a nuestro legítimo interés. Del mismo modo, si Ud. ha dado su consentimiento expreso en algún momento, sus datos serán tratados también con la finalidad de mantenerle informado de nuestras actividades. Le comunicamos que en ningún caso serán cedidos a terceros salvo que sea necesario para cumplir con las finalidades previstas, y que se conservarán por el tiempo que exista una relación o mientras existan obligaciones legales. Puede solicitar más información, o ejercer los derechos que le asisten frente al Responsable del Tratamiento: Associació Sangha Activa | CIF: G65817587 | Masía Ca L'Oller s/n, 08359 Sant Iscle de Vallalta (Bcn) | info@sanghaactiva.com Asimismo, también puede dirigirse ante la Autoridad de Protección de Datos Personales (www.aepd.es)
+                  </p>
+                )}
+                {showErrors && !formData.accepted && <span style={{ ...errorStyle, marginTop: 0 }}>Debes aceptar la política de privacidad</span>}
+              </div>
+            </label>
           </div>
 
           <div className="col-span-desktop" style={{ textAlign: 'left', marginTop: '1rem' }}>

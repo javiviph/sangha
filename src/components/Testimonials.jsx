@@ -89,12 +89,20 @@ export default function Testimonials() {
 
           {/* Navigation Controls */}
           <div className="carousel-nav">
-            <button onClick={prev} className="nav-btn prev">
+            <button 
+              onClick={prev} 
+              className="nav-btn prev"
+              aria-label="Testimonio anterior"
+            >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M15 18l-6-6 6-6" />
               </svg>
             </button>
-            <button onClick={next} className="nav-btn next">
+            <button 
+              onClick={next} 
+              className="nav-btn next"
+              aria-label="Siguiente testimonio"
+            >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M9 18l6-6-6-6" />
               </svg>
@@ -104,10 +112,12 @@ export default function Testimonials() {
           {/* Dots */}
           <div className="carousel-dots">
             {testimonials.map((_, i) => (
-              <div 
+              <button 
                 key={i} 
                 className={`dot ${i === activeIndex ? 'active' : ''}`}
                 onClick={() => setActiveIndex(i)}
+                aria-label={`Ir al testimonio ${i + 1}`}
+                style={{ border: 'none', cursor: 'pointer', padding: 0 }}
               />
             ))}
           </div>

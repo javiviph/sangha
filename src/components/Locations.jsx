@@ -62,6 +62,7 @@ export default function Locations() {
             height="480" 
             style={{ border: 0 }}
             title="Mapa de ubicaciones GIM"
+            loading="lazy"
           ></iframe>
         </div>
 

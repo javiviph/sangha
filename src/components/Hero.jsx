@@ -22,14 +22,6 @@ export default function Hero() {
             <a href="#contacto" className="btn btn-primary">
               Solicitar Inscripción
             </a>
-            <a 
-              href="https://sanghaactiva.playoffinformatica.com/InscripcioWeb.php?idActivitat=1307" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn btn-tertiary hero-tertiary btn-gold-shine"
-            >
-              Reservar plaza
-            </a>
           </div>
         </div>
 
